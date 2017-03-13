@@ -13,7 +13,7 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: auction-dev
+  database: charity-dev
   pool: 5
   host: localhost
   username: postgres
@@ -22,7 +22,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: auction-test
+  database: charity-test
   pool: 5
   host: localhost
   username: postgres
@@ -31,7 +31,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: auction-prod
+  database: charity-prod
   pool: 5
   host: localhost
   username: postgres
