@@ -25,6 +25,13 @@ class MicropostsController < ApplicationController
       params.require(:micropost).permit(:content, :picture)
     end
 
+    def logged_in_user
+      unless logged_in?
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
+    end
+
     def correct_user
       @micropost = current_user.microposts.find_by(id: params[:id])
       redirect_to root_url if @micropost.nil?
